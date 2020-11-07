@@ -6,15 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-public class docUser extends AppCompatActivity {
+public class donQuiz extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doc_user);
+        setContentView(R.layout.activity_don_quiz);
 
-        Button button = findViewById(R.id.button9);
+        Button button = findViewById(R.id.button17);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,8 +26,8 @@ public class docUser extends AppCompatActivity {
     }
 
     public void func() {
-        Intent intent = new Intent(this, docAccSuccess.class);
+        Intent intent = new Intent(this, donAccSuccess.class);
         startActivity(intent);
-    }
 
+    }
 }

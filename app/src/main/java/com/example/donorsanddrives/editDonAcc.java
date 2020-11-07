@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class editDocAcc extends AppCompatActivity {
+public class editDonAcc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_doc_acc);
+        setContentView(R.layout.activity_edit_don_acc);
 
         Button button = findViewById(R.id.button7);
 
@@ -25,7 +25,7 @@ public class editDocAcc extends AppCompatActivity {
     }
 
     public void func() {
-        Intent intent = new Intent(this, docMain.class);
+        Intent intent = new Intent(this, donorHome.class);
         startActivity(intent);
 
     }

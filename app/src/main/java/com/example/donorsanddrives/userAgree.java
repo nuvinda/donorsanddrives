@@ -7,16 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class docMain extends AppCompatActivity {
+public class userAgree extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doc_main);
+        setContentView(R.layout.activity_user_agree);
 
-        Button button = findViewById(R.id.button10);
-        Button button2 = findViewById(R.id.button12);
-        Button button3 = findViewById(R.id.button13);
+        Button button = findViewById(R.id.button14);
+        Button button2 = findViewById(R.id.button15);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,29 +29,16 @@ public class docMain extends AppCompatActivity {
                 func2();
             }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                func3();
-            }
-        });
     }
 
     public void func() {
-        Intent intent = new Intent(this, viewDocAcc.class);
+        Intent intent = new Intent(this, donQuiz.class);
         startActivity(intent);
-
     }
 
     public void func2() {
-        Intent intent = new Intent(this, editDocAcc.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-
     }
 
-    public void func3() {
-        Intent intent = new Intent(this, deleteDocAcc.class);
-        startActivity(intent);
-
-    }
 }

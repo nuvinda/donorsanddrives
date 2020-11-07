@@ -25,7 +25,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void loggedIn() {
-        Intent intent = new Intent(this, admin_home.class);
+        Intent intent = new Intent(this, donorHome.class);
         startActivity(intent);
     }
 }

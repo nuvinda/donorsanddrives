@@ -7,26 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class createDocAcc extends AppCompatActivity {
+public class donAccSuccess extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_doc_acc);
+        setContentView(R.layout.activity_don_acc_success);
 
-        Button button = findViewById(R.id.button7);
+        Button button = findViewById(R.id.button8);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func();
+                clickLogIn();
             }
         });
     }
 
-    public void func() {
-        Intent intent = new Intent(this, docUser.class);
+    public void clickLogIn() {
+        Intent intent = new Intent(this, donorHome.class);
         startActivity(intent);
-    }
 
+    }
 }

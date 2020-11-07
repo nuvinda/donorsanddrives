@@ -7,26 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class admin_home extends AppCompatActivity {
+public class createDonAcc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_home);
+        setContentView(R.layout.activity_create_don_acc);
 
-        Button button = findViewById(R.id.button4);
+        Button button = findViewById(R.id.button7);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                manageUsers();
+                func();
             }
         });
     }
 
-        public void manageUsers() {
-            Intent intent = new Intent(this, manage_accs.class);
-            startActivity(intent);
-        }
+    public void func() {
+        Intent intent = new Intent(this, donUser.class);
+        startActivity(intent);
+    }
 
 }

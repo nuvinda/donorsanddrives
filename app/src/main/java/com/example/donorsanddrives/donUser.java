@@ -6,16 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-public class searchDocId extends AppCompatActivity {
+public class donUser extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_doc_id);
+        setContentView(R.layout.activity_don_user_pass);
 
-        ImageButton button = findViewById(R.id.imageButton);
+        Button button = findViewById(R.id.button9);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,8 +25,8 @@ public class searchDocId extends AppCompatActivity {
     }
 
     public void func() {
-        Intent intent = new Intent(this, docMain.class);
+        Intent intent = new Intent(this, userAgree.class);
         startActivity(intent);
-
     }
+
 }
