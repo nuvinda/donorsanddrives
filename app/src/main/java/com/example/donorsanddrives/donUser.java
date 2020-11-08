@@ -14,7 +14,7 @@ public class donUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_don_user_pass);
 
-        Button button = findViewById(R.id.button9);
+        Button button = findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

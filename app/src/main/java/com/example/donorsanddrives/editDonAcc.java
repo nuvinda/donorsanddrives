@@ -14,7 +14,7 @@ public class editDonAcc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_don_acc);
 
-        Button button = findViewById(R.id.button7);
+        Button button = findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,7 +25,7 @@ public class editDonAcc extends AppCompatActivity {
     }
 
     public void func() {
-        Intent intent = new Intent(this, donorHome.class);
+        Intent intent = new Intent(this, accEditSuccess.class);
         startActivity(intent);
 
     }

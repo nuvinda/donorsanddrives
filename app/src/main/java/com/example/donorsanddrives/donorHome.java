@@ -1,13 +1,19 @@
 package com.example.donorsanddrives;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
-public class donorHome extends AppCompatActivity {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class donorHome extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +23,8 @@ public class donorHome extends AppCompatActivity {
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
         Button button4 = findViewById(R.id.button4);
-        Button button11 = findViewById(R.id.button11);
-        Button button16 = findViewById(R.id.button16);
+        Button button5 = findViewById(R.id.button5);
+
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,19 +44,64 @@ public class donorHome extends AppCompatActivity {
                 viewdBloodDrives();
             }
         });
-        button11.setOnClickListener(new View.OnClickListener() {
+
+        button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editProfile();
+                PopupMenu popup = new PopupMenu(donorHome.this, v);
+                popup.setOnMenuItemClickListener(donorHome.this);
+                popup.inflate(R.menu.popup_menu);
+                popup.show();
             }
         });
 
-        button16.setOnClickListener(new View.OnClickListener() {
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                logOut();
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.map:
+                        startActivity(new Intent(getApplicationContext()
+                                , MapsActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.home:
+                        return true;
+
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext()
+                                , profile.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
             }
         });
+    }
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            Toast.makeText(this, "Selected Item: " +item.getTitle(), Toast.LENGTH_SHORT).show();
+            switch (item.getItemId()) {
+
+                case R.id.notifications:
+                    return true;
+                case R.id.about:
+                    return true;
+
+                case R.id.log_out:
+                    Intent intent = new Intent(donorHome.this, MainActivity.class);
+                    startActivity(intent);
+                    return false;
+
+                default:
+                    return false;
+
+        }
     }
 
         public void viewDonationHistory() {
@@ -68,14 +119,5 @@ public class donorHome extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void editProfile() {
-        Intent intent = new Intent(this, editDonAcc.class);
-        startActivity(intent);
-    }
-
-    public void logOut() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
 
 }

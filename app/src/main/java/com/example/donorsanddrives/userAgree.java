@@ -14,13 +14,13 @@ public class userAgree extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_agree);
 
-        Button button = findViewById(R.id.button14);
-        Button button2 = findViewById(R.id.button15);
+        Button button = findViewById(R.id.button1);
+        Button button2 = findViewById(R.id.button2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func();
+                func1();
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +31,7 @@ public class userAgree extends AppCompatActivity {
         });
     }
 
-    public void func() {
+    public void func1() {
         Intent intent = new Intent(this, donQuiz.class);
         startActivity(intent);
     }

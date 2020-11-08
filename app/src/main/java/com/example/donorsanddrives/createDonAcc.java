@@ -14,7 +14,7 @@ public class createDonAcc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_don_acc);
 
-        Button button = findViewById(R.id.button7);
+        Button button = findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

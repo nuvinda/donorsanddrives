@@ -14,17 +14,17 @@ public class donAccSuccess extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_don_acc_success);
 
-        Button button = findViewById(R.id.button8);
+        Button button = findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickLogIn();
+                func();
             }
         });
     }
 
-    public void clickLogIn() {
+    public void func() {
         Intent intent = new Intent(this, donorHome.class);
         startActivity(intent);
 

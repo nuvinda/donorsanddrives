@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-public class donQuiz extends AppCompatActivity {
+public class accEditSuccess extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_don_quiz);
+        setContentView(R.layout.activity_acc_edit_success);
 
         Button button = findViewById(R.id.button);
 
@@ -26,7 +25,7 @@ public class donQuiz extends AppCompatActivity {
     }
 
     public void func() {
-        Intent intent = new Intent(this, donAccSuccess.class);
+        Intent intent = new Intent(this, donorHome.class);
         startActivity(intent);
 
     }

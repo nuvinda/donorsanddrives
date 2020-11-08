@@ -11,7 +11,7 @@
         android:icon="@drawable/ic_home" />
 
     <item
-        android:id="@+id/donors"
-        android:title="Donors"
+        android:id="@+id/profile"
+        android:title="Profile"
         android:icon="@drawable/ic_info" />
 </menu>
